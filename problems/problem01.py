@@ -17,8 +17,8 @@ use the same element twice.
 '''
 
 def solution(nums, target):
-    complements = {}
+    complements = set()
     for i, num in enumerate(nums):
         if (complement := target - num) in complements:
-            return [complements[complement], i]
-        complements[num] = i
+            return [nums.index(complement), i]
+        complements.add(num)
