@@ -14,5 +14,6 @@ characters.
 '''
 
 
-def solution(s):
+def solution(string):
+    breakpoint()
     pass
