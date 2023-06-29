@@ -15,5 +15,12 @@ characters.
 
 
 def solution(string):
-    breakpoint()
-    pass
+    max_length = length = 0
+    letters = ''
+
+    for letter in string:
+        length = 1 if letter in letters else length + 1
+        letters += letter
+        max_length = max(max_length, length)
+
+    return max_length
